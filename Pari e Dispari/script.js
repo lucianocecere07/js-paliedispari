@@ -6,18 +6,12 @@ Dichiariamo chi ha vinto.*/
 
 
 
-/* ERRORE!
-//scelta utente tra pari e dispari
-arrayPariDispari = ["pari", "dispari"];
 
+//scelta utente tra pari e dispari
 let sceltaPariDispari = prompt("scrivi la tua scelta tra pari e dispari");
 let sceltaPariDispariMinuscolo = sceltaPariDispari.toLowerCase();
-let pari = sceltaPariDispariMinuscolo.indexOf("pari");
 
-*/
-
-
-
+pariODispari();
 
 //inserire un numero da 1 a 5
 let numeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));
@@ -58,6 +52,17 @@ function sommaPariODispari(){
         console.log("ha vinto dispari");
     } else {
         console.log("Riprova con un numero tra 1 e 5");
+    }
+}
+
+function pariODispari(){
+    
+    if(sceltaPariDispariMinuscolo == "pari"){
+        console.log("hai scelto pari")
+    } else if(sceltaPariDispariMinuscolo == "dispari"){
+        console.log("hai scelto dispari")
+    } else {
+        console.log("scelta non accettata, riprova")
     }
 }
 
