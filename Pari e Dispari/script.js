@@ -10,7 +10,10 @@ let numeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));
 //generare un numero random da 1 a 5
 let numeroRandom = Math.floor((Math.random() * 5) + 1);
 
-sommaNumeri(numeroUtente, numeroRandom);
+
+
+let numeroSomma = sommaNumeri(numeroUtente, numeroRandom);
+sommaPariODispari();
 
 
 
@@ -28,6 +31,15 @@ function sommaNumeri(n1, n2){
     console.log("somma: " + somma);
 
     return somma;
+    }
+}
+
+function sommaPariODispari(){
+
+    if(numeroSomma %2 == 0){
+        console.log("ha vinto pari");
+    } else {
+        console.log("ha vinto dispari");
     }
 }
 
