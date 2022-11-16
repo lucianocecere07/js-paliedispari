@@ -10,6 +10,10 @@ let parolaUtente = prompt("Inserisci una parola palindroma");
 let parolaUtenteMinuscolo = parolaUtente.toLowerCase();
 console.log("la parola scelta è: " + parolaUtenteMinuscolo);
 
+//parola al contrario
+let parolaAlContrario = parolaUtenteMinuscolo.split("").reverse("").join("");
+console.log("la parola al contrario è: " + parolaAlContrario);
+
 palindromo();
 
 //---------------------------------------------------
@@ -19,11 +23,7 @@ palindromo();
 //-----------------Funzioni------------------------
 
 function palindromo() {
-
-    //parola al contrario
-    let parolaAlContrario = parolaUtenteMinuscolo.split("").reverse("").join("");
-    console.log("la parola al contrario è: " + parolaAlContrario);
-
+    
     if (parolaUtenteMinuscolo == parolaAlContrario) {
         console.log("La parola " + parolaUtenteMinuscolo + " è palindroma")
     } else {
