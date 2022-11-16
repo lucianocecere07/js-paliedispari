@@ -4,15 +4,31 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
+
+
+/* ERRORE!
+//scelta utente tra pari e dispari
+arrayPariDispari = ["pari", "dispari"];
+
+let sceltaPariDispari = prompt("scrivi la tua scelta tra pari e dispari");
+let sceltaPariDispariMinuscolo = sceltaPariDispari.toLowerCase();
+let pari = sceltaPariDispariMinuscolo.indexOf("pari");
+
+*/
+
+
+
+
 //inserire un numero da 1 a 5
 let numeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));
 
 //generare un numero random da 1 a 5
 let numeroRandom = Math.floor((Math.random() * 5) + 1);
 
-
-
+//somma dei numeri
 let numeroSomma = sommaNumeri(numeroUtente, numeroRandom);
+
+//stabilire se la somma è pari o dispari
 sommaPariODispari();
 
 
@@ -36,10 +52,12 @@ function sommaNumeri(n1, n2){
 
 function sommaPariODispari(){
 
-    if(numeroSomma %2 == 0){
+    if(numeroSomma %2 == 0 && !isNaN(numeroUtente)){
         console.log("ha vinto pari");
-    } else {
+    } else if(numeroSomma %2 != 0 && !isNaN(numeroUtente)) {
         console.log("ha vinto dispari");
+    } else {
+        console.log("Riprova con un numero tra 1 e 5");
     }
 }
 
