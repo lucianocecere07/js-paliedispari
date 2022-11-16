@@ -46,13 +46,13 @@ function sommaNumeri(n1, n2){
 
 function sommaPariODispari(){
 
-    if(numeroSomma %2 == 0 && !isNaN(numeroUtente)){
+    if(numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente)) {
+        console.log("Riprova con un numero tra 1 e 5");
+    }else if(numeroSomma %2 == 0 && !isNaN(numeroUtente)){
         console.log("ha vinto pari");
     } else if(numeroSomma %2 != 0 && !isNaN(numeroUtente)) {
         console.log("ha vinto dispari");
-    } else {
-        console.log("Riprova con un numero tra 1 e 5");
-    }
+    } 
 }
 
 function pariODispari(){
