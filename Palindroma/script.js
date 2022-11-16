@@ -3,12 +3,20 @@
 
 //parola chiesta all'utente
 let parolaUtente = prompt("Inserisci una parola palindroma");
-let parolaUtenteMinuscolo = parolaUtente.toLowerCase
+let parolaUtenteMinuscolo = parolaUtente.toLowerCase();
+console.log("la parola scelta è: " + parolaUtenteMinuscolo);
 
+let parolaAlContrario = parolaUtenteMinuscolo.split("").reverse("").join("");
+console.log("la parola al contrario è: " + parolaAlContrario);
 
 
 
 
 //---------Funzioni--------------
+
+function palindromo(){
+
+}
+
 
 //-------------------------------
