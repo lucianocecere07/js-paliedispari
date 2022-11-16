@@ -6,6 +6,7 @@ Dichiariamo chi ha vinto.*/
 
 
 
+//--------------Esercizio------------
 
 //scelta utente tra pari e dispari
 let sceltaPariDispari = prompt("scrivi la tua scelta tra pari e dispari");
@@ -25,41 +26,43 @@ let numeroSomma = sommaNumeri(numeroUtente, numeroRandom);
 //stabilire se la somma è pari o dispari
 sommaPariODispari();
 
+//--------------------------------------
+
 
 
 //----------------funzioni--------------
 
-function sommaNumeri(n1, n2){
-    
-    if(numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente)){
+function sommaNumeri(n1, n2) {
+
+    if (numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente)) {
         console.log("Inserisci un numero consentito");
     } else {
-    let somma = n1 + n2;
+        let somma = n1 + n2;
 
-    console.log("numero utente: " + numeroUtente);
-    console.log("numero random: " + numeroRandom);
-    console.log("somma: " + somma);
+        console.log("numero utente: " + numeroUtente);
+        console.log("numero random: " + numeroRandom);
+        console.log("somma: " + somma);
 
-    return somma;
+        return somma;
     }
 }
 
-function sommaPariODispari(){
+function sommaPariODispari() {
 
-    if(numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente)) {
+    if (numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente)) {
         console.log("Riprova con un numero tra 1 e 5");
-    }else if(numeroSomma %2 == 0 && !isNaN(numeroUtente)){
+    } else if (numeroSomma % 2 == 0 && !isNaN(numeroUtente)) {
         console.log("ha vinto pari");
-    } else if(numeroSomma %2 != 0 && !isNaN(numeroUtente)) {
+    } else if (numeroSomma % 2 != 0 && !isNaN(numeroUtente)) {
         console.log("ha vinto dispari");
-    } 
+    }
 }
 
-function pariODispari(){
-    
-    if(sceltaPariDispariMinuscolo == "pari"){
+function pariODispari() {
+
+    if (sceltaPariDispariMinuscolo == "pari") {
         console.log("hai scelto pari")
-    } else if(sceltaPariDispariMinuscolo == "dispari"){
+    } else if (sceltaPariDispariMinuscolo == "dispari") {
         console.log("hai scelto dispari")
     } else {
         console.log("scelta non accettata, riprova")
